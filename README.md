@@ -8,6 +8,22 @@ To get started, check out the repository, inspect the code,
 
 ####Part 1: Optimize PageSpeed Insights score for index.html
 
+Optimizations for index.html:
+1. Inlined the style.css to stop blocking.
+2. Put media query "print" on print.css to avoid blocking.
+3. Changed image sizes to load more efficiently.
+4. Made analytics.js load after the DOM by moving it to the bottom of the body.
+
+Optimizations for /views/js/main.js:
+1. Put a case statement for changePizzaSizes function to increase speed.
+2. Put in getElementsByClassName in several places to increase speed.
+3. Moved any variables created inside loops outside of loops to increase speed.
+4. Cached the top location of the webpage for a large performance increase outside of updatePosition function.
+5. Changed number of background pizzas generated from 200 to 32 as it appears to be the minimum seen.
+
+Optimizations for /views/css/style.css
+1. Added will-change: transform to "mover" to create new layers and smoother animations.
+
 Some useful tips to help you get started:
 
 1. Check out the repository
