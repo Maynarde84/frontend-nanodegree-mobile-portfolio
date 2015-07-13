@@ -29,7 +29,9 @@ form {
   font-weight: 800;
 }
 
+/** Added "will-change" for smoother animations**/
 .mover {
+  will-change: transform;
   position: fixed;
   width: 256px;
   z-index: -1;
